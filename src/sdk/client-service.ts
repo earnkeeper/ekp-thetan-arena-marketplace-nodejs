@@ -47,4 +47,8 @@ export class ClientService {
     this.httpServer.listen(port);
     this.app.use(express.static(staticPath));
   }
+
+  addController(controller: IController) {
+    this.controllers.push(controller)
+  }
 }
